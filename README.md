@@ -16,7 +16,7 @@ go build
 ### Docker Build
 
 ```
-docker buildx build --platform linux/amd64,linux/arm64 . -t telenliu/ip:23.4.18 --push
+docker buildx build --platform linux/amd64,linux/arm64 . -t telenliu/ip:23.4.19 --push
 ```
 
 
@@ -24,7 +24,7 @@ docker buildx build --platform linux/amd64,linux/arm64 . -t telenliu/ip:23.4.18 
 ###  Docker Run
 
 ```
-docker run -d -p 3000:3000 --restart=always telenliu/ip:23.4.18
+docker run -d -p 3000:3000 --restart=always telenliu/ip:23.4.19
 ```
 
 

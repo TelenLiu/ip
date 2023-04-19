@@ -18,8 +18,9 @@ func GetRealIP(r *http.Request) (ip string) {
 	if ip == "<nil>" {
 		remoteAddr, _, _ := net.SplitHostPort(r.RemoteAddr)
 		if remoteAddr == "::1" {
-			ip = "127.0.0.1"
+			remoteAddr = "127.0.0.1"
 		}
+		ip = net.ParseIP(strings.Split(remoteAddr, ",")[0]).String()
 	}
 	return
 }
